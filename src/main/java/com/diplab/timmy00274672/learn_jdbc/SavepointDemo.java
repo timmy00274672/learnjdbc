@@ -2,15 +2,13 @@ package com.diplab.timmy00274672.learn_jdbc;
 
 //STEP 1. Import required packages
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 
 public class SavepointDemo {
-   
+
     public static void main(String[] args) {
 	Connection conn = null;
 	Statement stmt = null;
@@ -49,7 +47,7 @@ public class SavepointDemo {
 
 	    // STEP 9: delete rows having ID grater than 104
 	    // But save point before doing so.
-	    Savepoint savepoint2 = conn.setSavepoint("ROWS_DELETED_2");
+	    // Savepoint savepoint2 = conn.setSavepoint("ROWS_DELETED_2");
 	    System.out.println("Deleting row....");
 	    SQL = "DELETE FROM Employees " + "WHERE ID = 95";
 	    stmt.executeUpdate(SQL);
